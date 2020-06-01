@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>Custom Cakes</title>
+  <!-- Google Icon Fonts used by Materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <!-- JavaScript for Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="" class="brand-logo left">Creamery</a>
+        <!-- Add login UI here -->
+        <ul class="right">
+          <li>
+          <% if (user) { %>
+            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+          <% } else { %>
+            <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+          <% } %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <H6>SELECT A CAKE FLAVOR</H6>
+   <form id="add-order-form"  method="POST"
+  action="/flights/<%= flight._id %>/tickets">
+  <ul class="base-flavor">
+    <li>
+      <button type="button" value="vanilla">VANILLA</button>
+      <button type="button" value="chocolate">CHOCOLATE</button>
+      <button type="button" value="coffee">COFFEE</button>
+      <button type="button" value="red-velvet">RED VELVET</button>
+      <button type="button" value="birthday-cake">BIRTHDAY CAKE</button>
+      <button type="button" value="cheesecake">CHEESECAKE</button>
+    </li>
+  </ul>
+
+<div>
+  <h6>SELECT AN ICE CREAM BASE</h6>
+    <ul>
+      <li>
+        <button type="button" value="premium">PREMIUM</button>
+        <button type="button" value="organic">ORGANIC</button>
+        <button type="button" value="cashew">CASHEW</button>
+        <button type="button" value="coconut">COCONUT</button>
+      </li>
+    </ul>
+</div>
+
+
+  <h6>SELECT ICE CREAM FLAVOR</h6>
+
+    <ul>
+      <li>
+        <button type="button" value="birthday-cake-flavor">BIRTHDAY CAKE</button>
+        <button type="button" value="cheesecake-flavor">CHEESECAKE</button>
+        <button type="button" value="chocolate-flavor">CHOCOLATE</button>
+        <button type="button" value="cookie-butter">COOKIE BUTTER</button>
+        <button type="button" value="cookie-monster">COOKIE MONSTER</button>
+        <button type="button" value="cookies-n-cream">COOKIES & CREAM</button>
+        <button type="button" value="animal-cookies">FROSTED ANIMAL COOKIE</button>
+        <button type="button" value="vanilla-flavor">MADAGASCAR VANILLA BEAN</button>
+        <button type="button" value="matcha">MATCHA GREEN TEA</button>
+        <button type="button" value="milk-coffee">MILK COFFEE</button>
+        <button type="button" value="mint">MINT</button>
+        <button type="button" value="nutella">NUTELLA</button>
+        <button type="button" value="peanut-butter">PEANUT BUTTER</button>
+        <button type="button" value="sea-salt-caramel">SEA SALT CARAMEL</button>
+        <button type="button" value="strawberry">STRAWBERRY</button>
+        <button type="button" value="thai-tea">THAI TEA</button>
+      </li>
+    </ul>
+    <input type="submit" value="Add Destination">
+
+
+</body>
+
 </html>
