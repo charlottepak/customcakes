@@ -7,3 +7,21 @@ body {
 a {
   color: #00B7FF;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: pink;
+}
+.nav ul {
+  width: 100%;
+}
+
+#btns {
+  width: 180px;
+}
+
+ul {
+  list-style: none;
+}
