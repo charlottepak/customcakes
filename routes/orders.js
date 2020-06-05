@@ -9,6 +9,6 @@ router.get('/', ordersCtrl.index);
 // router.post('/', ordersCtrl.create);
 
 router.post('/', ordersCtrl.create);
-router.delete('/my-orders/:id', cakeCtrl.delete);
+router.delete('/:id', cakeCtrl.delete);
 
 module.exports = router;

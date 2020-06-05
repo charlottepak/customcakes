@@ -26,12 +26,6 @@ function create(req, res) {
 }
 
 function deleteCake(req, res) {
-  Order.deleteOne(req.params.id, function (err, result) {
-    if (err) {
-      red.send(err);
-    } else {
-      red.send(result);
-    }
-  });
-  res.redirect("/my-orders");
+  Order.deleteOne({ _id: req.params.id}, function (err, result) {});
+  res.redirect("/orders/");
 }

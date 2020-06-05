@@ -47,11 +47,12 @@
       <tbody>
         <% orders.forEach(function(o) { %>
           <tr>
-            <form action="/orders/<%= o.id %>?_method=DELETE"
-              class="delete-form" method="POST">
-              <button type="submit">X</button>
-            </form>
-
+            <td>
+              <form action="/orders/<%= o.id %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button type="submit">X</button>
+              </form>
+            </td>
             <td><%= o.size %></td>
             <td><%= o.cakeFlavor %></td>
             <td><%= o.baseType %></td>
