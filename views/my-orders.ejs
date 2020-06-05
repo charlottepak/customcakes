@@ -14,7 +14,7 @@
         <a href="/orders" <%- title === 'View Orders' ? 'class="active"' : '' %>>VIEW ORDERS</a>
     </nav>
 
-<h1>ORDERS:</h1>
+<!-- <h1>ORDERS:</h1>
 <section>
     <div>SIZE:</div>
     <div><%= orders.size %></div>
@@ -28,4 +28,42 @@
 
 </main>
 </body>
-</html>
+</html> -->
+
+ 
+
+ <% if (orders.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Cake Flavor</th>
+          <th>Ice Cream Base</th>
+          <th>Ice Cream Flavor</th>
+          <button type="submit">Delete</button>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <% orders.forEach(function(o) { %>
+          <tr>
+            <form action="/orders/<%= o.id %>?_method=DELETE"
+              class="delete-form" method="POST">
+              <button type="submit">X</button>
+            </form>
+
+            <td><%= o.size %></td>
+            <td><%= o.cakeFlavor %></td>
+            <td><%= o.baseType %></td>
+            <td><%= o.flavor %></td>
+          </tr>
+          
+
+        <% }); %>
+        
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Orders Yet</h5>
+  <% } %>
+

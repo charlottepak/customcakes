@@ -29,68 +29,62 @@
       </div>
     </nav>
   </div>
+  
+  <form id="add-to-order" action="/orders" method="POST">
 
   <H6>SELECT A SIZE:</H6>
-  <form id="add-to-order" action="/orders/orders" method="POST">
- <ul class="size" name="size">
-   <li>
-     <button id="btns" type="button" value="small">SMALL</button>
-     <button id="btns" type="button" value="medium">MEDIUM</button>
-     <button id="btns" type="button" value="large">LARGE</button>
-   </li>
- </ul>
+<div id="first-image"></div>
+
+    <select name="size">
+      <option name="small">SMALL</option>
+      <option name="medium">MEDIUM</option>
+      <option name="large">LARGE</option>
+    </select>
 
   <H6>SELECT A CAKE FLAVOR:</H6>
-  <ul class="cake-flavor" name="cakeFlavor">
-    <li>
-      <button id="btns" type="button" value="vanilla">VANILLA</button>
-      <button id="btns" type="button" value="chocolate">CHOCOLATE</button>
-      <button id="btns" type="button" value="coffee">COFFEE</button>
-      <button id="btns" type="button" value="red-velvet">RED VELVET</button>
-      <button id="btns" type="button" value="birthday-cake">BIRTHDAY CAKE</button>
-      <button id="btns" type="button" value="cheesecake">CHEESECAKE</button>
-    </li>
-  </ul>
+  <div id="second-image"></div>
+
+  <select name="cakeFlavor">
+    <option name="vanilla">VANILLA</option>
+    <option name="chocolate">CHOCOLATE</option>
+    <option name="coffee">COFFEE</option>
+    <option name="red-velvet">RED VELVET</option>
+    <option name="birthday-cake">BIRTHDAY CAKE</option>
+    <option name="cheesecake">CHEESECAKE</option>
+  </select>
 
 <div>
   <h6>SELECT AN ICE CREAM BASE:</h6>
-    <ul class="base-type" name="baseType">
-      <li>
-        <button id="btns" type="button" value="premium">PREMIUM</button>
-        <button id="btns" type="button" value="organic">ORGANIC</button>
-        <button id="btns" type="button" value="cashew">CASHEW</button>
-        <button id="btns" type="button" value="coconut">COCONUT</button>
-      </li>
-    </ul>
-</div>
+
+  <select name="baseType">
+    <option name="premium">PREMIUM</option>
+    <option name="organic">ORGANIC</option>
+    <option name="cashew">CASHEW</option>
+    <option name="coconut">COCONUT</option>
+  </select>
 
 
   <h6>SELECT ICE CREAM FLAVOR:</h6>
 
-    <ul class="flavor" name="flavor">
-      <li>
-        <button id="btns" type="button" value="birthday-cake-flavor">BIRTHDAY CAKE</button>
-        <button id="btns" type="button" value="cheesecake-flavor">CHEESECAKE</button>
-        <button id="btns" type="button" value="chocolate-flavor">CHOCOLATE</button>
-        <button id="btns" type="button" value="cookie-butter">COOKIE BUTTER</button>
-        <button id="btns" type="button" value="cookie-monster">COOKIE MONSTER</button>
-        <button id="btns" type="button" value="cookies-n-cream">COOKIES & CREAM</button>
-        <button id="btns" type="button" value="animal-cookies">FROSTED ANIMAL COOKIE</button>
-        <button id="btns" type="button" value="vanilla-flavor">MADAGASCAR VANILLA BEAN</button>
-        <button id="btns" type="button" value="matcha">MATCHA GREEN TEA</button>
-        <button id="btns" type="button" value="milk-coffee">MILK COFFEE</button>
-        <button id="btns" type="button" value="mint">MINT</button>
-        <button id="btns" type="button" value="nutella">NUTELLA</button>
-        <button id="btns" type="button" value="peanut-butter">PEANUT BUTTER</button>
-        <button id="btns" type="button" value="sea-salt-caramel">SEA SALT CARAMEL</button>
-        <button id="btns" type="button" value="strawberry">STRAWBERRY</button>
-        <button id="btns" type="button" value="thai-tea">THAI TEA</button>
-      </li>
-    </ul>
+  <select name="flavor">
+    <option name="birthday-cake-flavor">BIRTHDAY CAKE</option>
+    <option name="cheesecake-flavor">CHEESECAKE</option>
+    <option name="chocolate-flavor">CHOCOLATE</option>
+    <option name="cookie-butter">COOKIE BUTTER</option>
+    <option name="cookie-monster">COOKIE MONSTER</option>
+    <option name="animal-cookies">FROSTED ANIMAL COOKIE</option>
+    <option name="vanilla-flavor">VANILLA</option>
+    <option name="matcha">MATCHA GREEN TEA</option>
+    <option name="nutella">NUTELLA</option>
+    <option name="peanut-butter">PEANUT BUTTER</option>
+    <option name="sea-salt-caramel">SEA SALT CARAMEL</option>
+    <option name="strawberry">STRAWBERRY</option>
+    <option name="thai-tea">THAI TEA</option>
+  </select>
+
     <br></br>
     <input type="submit" value="Add To Order">
 </form>
 
-  </main>
 </body>
 </html>
