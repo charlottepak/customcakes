@@ -1,16 +1,16 @@
 var express = require("express");
 var router = express.Router();
 const ordersCtrl = require("../controllers/orders");
-const cakeCtrl = require("../controllers/orders");
-
 
 router.get("/", isLoggedIn, ordersCtrl.index);
 
 router.post("/", isLoggedIn, ordersCtrl.create);
 
-router.delete("/:id", isLoggedIn, cakeCtrl.delete);
+router.delete("/:id", isLoggedIn, ordersCtrl.delete);
 
-router.get("/orders/:id/edit", isLoggedIn, ordersCtrl.edit);
+router.get("/:id/edit", isLoggedIn, ordersCtrl.edit);
+
+router.put("/:id", isLoggedIn, ordersCtrl.update);
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {

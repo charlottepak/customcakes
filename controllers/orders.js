@@ -5,6 +5,7 @@ module.exports = {
   create,
   delete: deleteCake,
   edit,
+  update
 };
 
 function index(req, res) {
@@ -12,7 +13,6 @@ function index(req, res) {
     res.render("my-orders", { title: "All Orders", orders });
   });
 }
-
 
 function create(req, res) {
   const order = new Order(req.body);
@@ -29,6 +29,11 @@ function deleteCake(req, res) {
 
 function edit(req, res) {
   // Retrieve the todo being edited
-  const order = Order.findById(req.params.id);
-  res.redirect("/orders/edit.ejs/", { order });
+  Order.findById(req.params.id, (err, order) => {
+    res.render("edit", { order });
+  });
+}
+
+function update(req, res) {
+  res.redirect('/orders/');
 }

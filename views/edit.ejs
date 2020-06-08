@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title><% title %></title>
+    <title>Edit Cake</title>
 </head>
 <body>
-  <form action="/orders/<%= orders.id%>/edit?_method=PUT" method="POST" autocomplete="off">
+  <form action="/orders/<%= order._id %>?_method=PUT" method="POST" autocomplete="off">
 
     <H6>EDIT SIZE:</H6>
       <div id="first-image"></div>
