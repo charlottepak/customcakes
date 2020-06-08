@@ -13,23 +13,6 @@
         <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
         <a href="/orders" <%- title === 'View Orders' ? 'class="active"' : '' %>>VIEW ORDERS</a>
     </nav>
-
-<!-- <h1>ORDERS:</h1>
-<section>
-    <div>SIZE:</div>
-    <div><%= orders.size %></div>
-    <div>CAKE BASE FLAVOR:</div>
-    <div><%= orders.cakeFlavor %></div>
-    <div>ICE CREAM BASE:</div>
-    <div><%= orders.baseType %></div>
-    <div>ICE CREAM FLAVOR</div>
-    <div><%= orders.flavor %></div>
-</section>
-
-</main>
-</body>
-</html> -->
-
  
 
  <% if (orders.length) { %>
@@ -40,26 +23,25 @@
           <th>Cake Flavor</th>
           <th>Ice Cream Base</th>
           <th>Ice Cream Flavor</th>
-          <button type="submit">Delete</button>
-          
         </tr>
       </thead>
       <tbody>
         <% orders.forEach(function(o) { %>
           <tr>
-            <td>
-              <form action="/orders/<%= o.id %>?_method=DELETE"
-                class="delete-form" method="POST">
-                <button type="submit">X</button>
-              </form>
-            </td>
             <td><%= o.size %></td>
             <td><%= o.cakeFlavor %></td>
             <td><%= o.baseType %></td>
             <td><%= o.flavor %></td>
+              <td>
+                <form action="/orders/<%= o.id %>?_method=DELETE"
+                class="delete-form" method="POST">
+                 <button type="submit">X</button>
+              </form>
+              <a href="views/<%= o.id %>/edit">Edit Cake</a>
+              </form>
+              </td>
           </tr>
-          
-
+        
         <% }); %>
         
       </tbody>

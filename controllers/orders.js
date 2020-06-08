@@ -3,8 +3,8 @@ const Order = require("../models/order");
 module.exports = {
   index,
   create,
-  newOrder,
   delete: deleteCake,
+  edit,
 };
 
 function index(req, res) {
@@ -13,9 +13,6 @@ function index(req, res) {
   });
 }
 
-function newOrder(req, res) {
-  res.render("movies/my-order", { title: "New Order" });
-}
 
 function create(req, res) {
   const order = new Order(req.body);
@@ -26,6 +23,12 @@ function create(req, res) {
 }
 
 function deleteCake(req, res) {
-  Order.deleteOne({ _id: req.params.id}, function (err, result) {});
+  Order.deleteOne({ _id: req.params.id }, function (err, result) {});
   res.redirect("/orders/");
+}
+
+function edit(req, res) {
+  // Retrieve the todo being edited
+  const order = Order.findById(req.params.id);
+  res.redirect("/orders/edit.ejs/", { order });
 }

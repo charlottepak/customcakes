@@ -1,14 +1,23 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-const ordersCtrl = require('../controllers/orders');
-const cakeCtrl = require('../controllers/orders');
+const ordersCtrl = require("../controllers/orders");
+const cakeCtrl = require("../controllers/orders");
 
-router.get('/', ordersCtrl.index);
-// router.get('/new', ordersCtrl.new);
-// router.get('/:id', ordersCtrl.show);
-// router.post('/', ordersCtrl.create);
 
-router.post('/', ordersCtrl.create);
-router.delete('/:id', cakeCtrl.delete);
+router.get("/", isLoggedIn, ordersCtrl.index);
+
+router.post("/", isLoggedIn, ordersCtrl.create);
+
+router.delete("/:id", isLoggedIn, cakeCtrl.delete);
+
+router.get("/orders/:id/edit", isLoggedIn, ordersCtrl.edit);
+
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  } else {
+    res.redirect("/auth/google");
+  }
+}
 
 module.exports = router;

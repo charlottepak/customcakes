@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title><% title %></title>
+</head>
+<body>
+  <form action="/orders/<%= orders.id%>/edit?_method=PUT" method="POST" autocomplete="off">
+
+    <H6>EDIT SIZE:</H6>
+      <div id="first-image"></div>
+  
+      <select name="size">
+        <option name="small">SMALL</option>
+        <option name="medium">MEDIUM</option>
+        <option name="large">LARGE</option>
+      </select>
+  
+    <H6>EDIT CAKE FLAVOR:</H6>
+    <div id="second-image"></div>
+  
+    <select name="cakeFlavor">
+      <option name="vanilla">VANILLA</option>
+      <option name="chocolate">CHOCOLATE</option>
+      <option name="coffee">COFFEE</option>
+      <option name="red-velvet">RED VELVET</option>
+      <option name="birthday-cake">BIRTHDAY CAKE</option>
+      <option name="cheesecake">CHEESECAKE</option>
+    </select>
+
+    <h6>EDIT ICE CREAM BASE:</h6>
+  
+    <div id="third-image"></div>
+    <select name="baseType">
+      <option name="premium">PREMIUM</option>
+      <option name="organic">ORGANIC</option>
+      <option name="cashew">CASHEW</option>
+      <option name="coconut">COCONUT</option>
+    </select>
+  
+  
+    <h6>EDIT ICE CREAM FLAVOR:</h6>
+
+    <div id="fourth-image"></div>
+    <select name="flavor">
+      <option name="birthday-cake-flavor">BIRTHDAY CAKE</option>
+      <option name="cheesecake-flavor">CHEESECAKE</option>
+      <option name="chocolate-flavor">CHOCOLATE</option>
+      <option name="cookie-butter">COOKIE BUTTER</option>
+      <option name="cookie-monster">COOKIE MONSTER</option>
+      <option name="animal-cookies">FROSTED ANIMAL COOKIE</option>
+      <option name="vanilla-flavor">VANILLA</option>
+      <option name="matcha">MATCHA GREEN TEA</option>
+      <option name="nutella">NUTELLA</option>
+      <option name="peanut-butter">PEANUT BUTTER</option>
+      <option name="sea-salt-caramel">SEA SALT CARAMEL</option>
+      <option name="strawberry">STRAWBERRY</option>
+      <option name="thai-tea">THAI TEA</option>
+    </select>
+  
+    <br></br>
+    <input type="submit" value="Edit Order">
+  </form>
+</body>
+</html>
