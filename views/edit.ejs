@@ -2,27 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Edit Cake</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <title>Custom Cakes</title>
 </head>
 <body>
   <form action="/orders/<%= order._id %>?_method=PUT" method="POST" autocomplete="off">
 
     <H6>EDIT SIZE:</H6>
-      <div id="first-image"></div>
-  
       <select name="size">
         <option name="small">SMALL</option>
         <option name="medium">MEDIUM</option>
         <option name="large">LARGE</option>
       </select>
   
-    <H6>EDIT CAKE FLAVOR:</H6>
-    <div id="second-image"></div>
-  
+    <H6>EDIT CAKE FLAVOR:</H6>  
     <select name="cakeFlavor">
       <option name="vanilla">VANILLA</option>
       <option name="chocolate">CHOCOLATE</option>
@@ -33,8 +27,6 @@
     </select>
 
     <h6>EDIT ICE CREAM BASE:</h6>
-  
-    <div id="third-image"></div>
     <select name="baseType">
       <option name="premium">PREMIUM</option>
       <option name="organic">ORGANIC</option>
@@ -44,8 +36,6 @@
   
   
     <h6>EDIT ICE CREAM FLAVOR:</h6>
-
-    <div id="fourth-image"></div>
     <select name="flavor">
       <option name="birthday-cake-flavor">BIRTHDAY CAKE</option>
       <option name="cheesecake-flavor">CHEESECAKE</option>

@@ -35,5 +35,7 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  res.redirect('/orders/');
-}
+  Order.findByIdAndUpdate(req.params.id, req.body, function (err) {
+    res.redirect("/orders/");
+  })
+  }

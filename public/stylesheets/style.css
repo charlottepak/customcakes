@@ -1,23 +1,83 @@
 body {
   padding: 50px;
   margin: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Abel', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/* .myorders {
+  background-image: url(https://i.imgur.com/I7Mayy3.jpg);
+  background-size: 100%;
+} */
+
+.navs {
+  text-align: center;
+  list-style-type: none;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  background-color: pink;
+.material-icons {
+  color: black;
+  text-align: center;
 }
-.nav ul {
-  width: 100%;
+
+.title {
+  float: left;
+  font-size: xx-large;
+}
+
+.dropdown{
+  width: 150px;
+  width: 50%;
+}
+
+#first-image {
+  float: left;
+  width: 660px;
+  height: 500px;
+  background-image: url(https://i.imgur.com/4wRc3q5.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 5px;
 }
 
 #second-image {
-  background-image: url(https://i.imgur.com/T9OHQR9.jpg);
+  float: left;
+  width: 660px;
+  height: 500px;
+  background-image: url(https://i.imgur.com/GnafGwS.jpg);
+  background-size: 100%;
+  margin: 5px;
+}
+
+#third-image {
+  float: right;
+  width: 660px;
+  height: 500px;
+  margin: 5px;
+  background-image: url(https://i.imgur.com/H5bOQ2k.jpg);
+  background-size: 100%;
+}
+
+#fourth-image {
+  float: right;
+  width: 660px;
+  height: 500px;
+  margin: 5px;  
+  background-image: url(https://i.imgur.com/4DiKEgY.jpg);
+  background-size: 100%;
+} 
+
+.sections {
+  font-size: xx-large;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  border: 1px solid black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center; 
+  font-family: 'Abel', sans-serif;
+  border-radius: 10px 10px 10px 10px;
 }

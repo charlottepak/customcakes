@@ -2,28 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <title><% title %></title>
 </head>
 <body>
 
   <div class="navbar">
     <nav>
-      <div class="nav-wrapper">
-        <a href="">Creamery</a>
-        <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
-        <a href="/orders" <%- title === 'View Orders' ? 'class="active"' : '' %>>ORDERS</a>
-        <!-- Add login UI here -->
+      <div class="nav-wrapper"></div>
+        <a class="title">CUSTOM CAKES</a>
+        <a class="material-icons" href="/orders" <%- title === 'ORDERS' ? 'class="active"' : '' %>>ORDERS</a>
         <ul class="right">
-          <li>
+          <li class="navs">
           <% if (user) { %>
-            <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+            <a href="/logout"><i class="material-icons"></i>LOG OUT</a>
           <% } else { %>
-            <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
+            <a href="/auth/google"><i class="material-icons"></i>LOGIN WITH GOOGLE</a>
           <% } %>
+          <title>Custom Cakes</title>
           </li>
         </ul>
       </div>
@@ -32,19 +29,20 @@
   
   <form id="add-to-order" action="/orders" method="POST">
 
+<div class="row">
+<div class="sections" id="first-image">
   <H6>SELECT A SIZE:</H6>
-<div id="first-image"></div>
-
-    <select name="size">
+    <select class="dropdown" name="size">
       <option name="small">SMALL</option>
       <option name="medium">MEDIUM</option>
       <option name="large">LARGE</option>
     </select>
+</div>
 
+  <div class="sections" id="second-image">
+    
   <H6>SELECT A CAKE FLAVOR:</H6>
-  <div id="second-image"></div>
-
-  <select name="cakeFlavor">
+  <select class="dropdown" name="cakeFlavor">
     <option name="vanilla">VANILLA</option>
     <option name="chocolate">CHOCOLATE</option>
     <option name="coffee">COFFEE</option>
@@ -52,21 +50,22 @@
     <option name="birthday-cake">BIRTHDAY CAKE</option>
     <option name="cheesecake">CHEESECAKE</option>
   </select>
+</div>
 
-<div>
+<div class="sections" id="third-image">
   <h6>SELECT AN ICE CREAM BASE:</h6>
-
-  <select name="baseType">
+  <select class="dropdown" name="baseType">
     <option name="premium">PREMIUM</option>
     <option name="organic">ORGANIC</option>
     <option name="cashew">CASHEW</option>
     <option name="coconut">COCONUT</option>
   </select>
+</div>
 
 
+<div class="sections" id="fourth-image">
   <h6>SELECT ICE CREAM FLAVOR:</h6>
-
-  <select name="flavor">
+  <select class="dropdown" name="flavor">
     <option name="birthday-cake-flavor">BIRTHDAY CAKE</option>
     <option name="cheesecake-flavor">CHEESECAKE</option>
     <option name="chocolate-flavor">CHOCOLATE</option>
@@ -81,9 +80,11 @@
     <option name="strawberry">STRAWBERRY</option>
     <option name="thai-tea">THAI TEA</option>
   </select>
+</div>
+</div>
 
     <br></br>
-    <input type="submit" value="Add To Order">
+    <input type="submit" value="ADD TO ORDER" class="button">
 </form>
 
 </body>
