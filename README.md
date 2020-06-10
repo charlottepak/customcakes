@@ -7,7 +7,7 @@ This app allows a customer to log in to their account, customize their ice cream
 
 
 ### Home Page: 
-![Home Page](file:///Users/charlottepak/Desktop/Screen%20Shot%202020-06-10%20at%209.40.06%20AM.png)
+![Home Page](https://imgur.com/KoQ5o36)
 ![Home Page](file:///Users/charlottepak/Desktop/Screen%20Shot%202020-06-10%20at%209.40.10%20AM.png)
 
 ### Orders Page:
@@ -31,8 +31,10 @@ Mongodb
 Heroku
 
 
-### Click here to view: http://custom-cakes.herokuapp.com/#
-### Trello board: https://trello.com/b/wOhz243y/welcome-to-trello
+### Click here to view: 
+http://custom-cakes.herokuapp.com/#
+### Trello board: 
+https://trello.com/b/wOhz243y/welcome-to-trello
 
 
 
