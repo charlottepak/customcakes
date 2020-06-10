@@ -8,14 +8,14 @@ This app allows a customer to log in to their account, customize their ice cream
 
 ### Home Page: 
 ![Home Page](screenshots/homepage.png?)
-![Home Page](file:///Users/charlottepak/Desktop/Screen%20Shot%202020-06-10%20at%209.40.10%20AM.png)
+![Home Page](screenshots/homepage2.png?)
 
 ### Orders Page:
-![Orders Page](file:///Users/charlottepak/Desktop/Screen%20Shot%202020-06-10%20at%209.42.19%20AM.png)
+![Orders Page](screenshots/orderspage.png?)
 
 
 ### Edit Page:
-![Edit Page](file:///Users/charlottepak/Desktop/Screen%20Shot%202020-06-10%20at%209.42.26%20AM.png)
+![Edit Page](screenshots/editpage.png?)
 
 
 
