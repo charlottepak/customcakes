@@ -69,7 +69,7 @@ body {
   font-size: xx-large;
 }
 
-.button {
+/* .button {
   display: block;
   width: 100%;
   border: 1px solid black;
@@ -79,4 +79,9 @@ body {
   text-align: center; 
   font-family: 'Abel', sans-serif;
   border-radius: 10px 10px 10px 10px;
+} */
+
+.button {
+  width: 80px;
+  color: grey;
 }
